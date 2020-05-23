@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Contact us at SpaceX and let us know if there was something unclear. ">
+  <meta name="keywords" content="Space, contact SpaceX, Rockets, Launches, Astronauts">
+  <meta name="author" content="Shamil Babujev">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | SpaceX</title>
+    <link rel="icon" href="../pictures/siteicon.png">
+    <link rel="stylesheet" href="../css/contact.css">
+  </head>
+  <body>
+    <header>
+      <nav class="menu">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="launches.html">LAUNCHES</a></li>
+          <li><a href="rockets.html">ROCKETS</a></li>
+          <li><a href="contact.html" class="active">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="socialbar">
+      <a
+        href="https://www.facebook.com/Space-X-2006330642950821/"
+        class="facebook"
+        ><i class="fa fa-facebook"></i
+      ></a>
+      <a href="https://www.instagram.com/spacex/?hl=nb" class="instagram"
+        ><i class="fa fa-instagram"></i
+      ></a>
+      <a href="https://www.youtube.com/user/spacexchannel" class="youtube"
+        ><i class="fa fa-youtube"></i
+      ></a>
+    </div>
+    <main>
+      <div class="contact-container">
+        <h1>Get in touch with us!</h1>
+      </div>
+      <div class="form-wrap">
+        <form id="formDesign">
+          <div class="form-items">
+            <input name="name" id="name" placeholder="Name:" />
+            <div class="missing-warning" id="NameError">*Name missing*</div>
+          </div>
+          <div class="form-fields">
+            <input name="email" id="email" placeholder="Email:" />
+            <div class="missing-warning" id="emailFault">*Email missing*</div>
+            <div class="missing-warning" id="emailInvalid">
+              *Enter valid Email adress*
+            </div>
+          </div>
+          <div class="form-fields">
+            <input name="message" id="message" placeholder="Message:" />
+            <div class="missing-warning" id="nomessage">*Message missing*</div>
+          </div>
+          <div class="buttonHolder">
+            <button type="submit" class="button2" id="submit">Submit</button>
+          </div>
+          <div id="confirmation">
+            <span>Thank you for your message!</span>
+          </div>
+          <img class="astro" src="../pictures/astro.png" alt=""/>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-text">
+        &copy; SPACEX MICROSITE EXAM
+        <img class="logo" src="../pictures/spacex.png" alt="spacex logo symbol">
+        <a href="https://www.spacex.com/">SPACEX OFFICIAL WEBSITE </a>
+      </div>
+    </footer>
+  </body>
+  <script src="../js/contact.js"></script>
+  <script src="https://kit.fontawesome.com/1c7529471f.js"crossorigin="anonymous"></script>
+</html>
