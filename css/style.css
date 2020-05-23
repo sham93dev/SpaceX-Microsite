@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  list-style-type: none;
+  color: #fff;
+}
+a:hover {
+  cursor: pointer;
+}
+
+/*---Navbar and Header---*/
+.menu {
+  display: inline;
+  flex: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  width: auto;
+}
+
+.menu ul li {
+  flex: 2;
+  text-align: center;
+  flex-wrap: column;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 39px;
+}
+
+.menu ul li a:hover {
+  color: #e0d1a1;
+}
+
+.active:visited {
+  color: #e0d1a1;
+}
+
+header {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+header h2 {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+}
+
+/*---Sticky social bar (inspiration from w3schools)----*/
+
+.socialbar {
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.socialbar a {
+  display: block;
+  text-align: center;
+  padding: 20px;
+}
+
+.socialbar a:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.facebook, .instagram, .youtube{
+  background-color:#c6a64638 ;
+}
+
+.fa {
+  color: #fff;
+  padding: 20px;
+  font-size: 24px;
+}
+
+/*---Frontpage----*/
+
+.hero-img {
+  max-width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../pictures/spaceman.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.hero-img::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.678), rgba(20, 14, 14, 0.582));
+}
+
+.hero-img h1 {
+  font-size: 50px;
+  margin-top: 0;
+  z-index: 1;
+}
+
+.hero-img-text {
+ 
+  justify-content: center;
+  text-align: center;
+  color: #f2f2f2;
+  z-index: 1;
+}
+
+
+.logo {
+  height: 29px;
+  width: auto;
+}
+
+/*---Buttons----*/
+
+.button {
+  display: flex;
+  width: 190px;
+  border: 3px solid black;
+  padding: 0.8em;
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  text-decoration: none;
+  justify-content: center;
+  font-size: 1.7em;
+  background-color: #c6a546;
+}
+
+.button:hover {
+  background-color: black;
+}
+
+/*---Footer----*/
+
+.footer-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #000000;
+  color: #ffffff;
+  padding: auto;
+  letter-spacing: 2px;
+  height: 40px;
+  font-size: 13px;
+}
+
+.footer-text a {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.footer-text a:hover {
+  text-decoration: underline;
+  color: red;
+}
+
+
+/*-----Smaller Screen-----*/
+@media screen and (max-width: 799px) {
+  body {
+    font-size: 14px;
+  }
+
+  header {
+    justify-content: center;
+    display: table-cell;
+    font-size: 10px;
+  }
+
+  .hero-img .button {
+    display: table-cell;
+  }
+
+  .hero-img {
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    max-width: 100%;
+    -webkit-background-size: cover;
+    width: 100%;
+  }
+
+  .hero-img h1 {
+    font-size: 20px;
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+  }
+
+
+  .button {
+    display: inline;
+    margin-top: auto;
+    padding-top: 20px;
+  }
+
+  .hero-img h2 {
+    font-size: 13px;
+    text-align: center;
+  }
+  .socialbar {
+    width: 12%;
+    height: 25px;
+  }
+
+  .fa {
+    padding: 3px;
+    font-size: 15px;
+  }
+
+  .menu ul li {
+    min-width: 100%;
+    text-align: center;
+    justify-content: center;
+    margin-top: 1%;
+  }
+
+  .menu ul li a {
+    display: inline;
+    font-size: 22px;
+    justify-content: center;
+    margin-top: 1%;
+  }
+
+  .button{
+    font-size: 20px;
+    padding: 20px;
+    
+  }
+
+  .footer,
+  .footer-text {
+    font-size: 10px;
+    text-align: center;
+    justify-content: space-around;
+    width: auto;
+    padding: 20px;
+    flex-direction: table-cell;
+    flex-wrap: row;
+  }
+}

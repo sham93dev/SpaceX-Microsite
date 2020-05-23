@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  height: 100%;
+  background: linear-gradient(to right, #000000, #434343);
+}
+
+a {
+  text-decoration: none;
+  list-style-type: none;
+  color: #fff;
+}
+a:hover {
+  cursor: pointer;
+}
+
+/*---Navbar and Header---*/
+.menu {
+  display: inline;
+  flex: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  width: auto;
+}
+
+.menu ul li {
+  flex: 2;
+  text-align: center;
+  flex-wrap: column;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 39px;
+}
+
+.menu ul li a:hover {
+  color: #e0d1a1;
+}
+
+.active:visited {
+  color: #e0d1a1;
+}
+
+header {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+header h2 {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+}
+
+/*---Sticky social bar (inspiration from w3schools)----*/
+
+.socialbar {
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.socialbar a {
+  display: block;
+  text-align: center;
+  padding: 6px;
+}
+
+.socialbar a:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.facebook, .instagram, .youtube{
+  background-color:#a08841 ;
+}
+
+.fa {
+  color: #fff;
+  padding: 20px;
+  font-size: 44px;
+}
+
+/*---Launches page----*/
+
+.big-image {
+  background-image: url("../pictures/rocketpic.jpg");
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  max-width: auto;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.big-image::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  height: 80%;
+  width: 80%;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgb(20, 14, 14));
+}
+
+.hero-text h1 {
+  font-size: xxx-large;
+}
+
+.hero-text p {
+  font-size: xx-large;
+  text-align: center;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 1;
+}
+
+/*---JSON API css design----*/
+
+.spacex-rockets {
+  display: grid;
+  grid-row-gap: 53px;
+  grid-column-gap: 30px;
+  padding: 15px;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: auto;
+  max-width: auto;
+}
+
+.spacex-rockets-launch {
+  
+  background-image: url(../pictures/stars2.jpg);
+  color: #ffffff;
+  text-align: justify;
+  font-size: large;
+}
+
+.spacex-rockets-launch p {
+  padding: 15px;
+  margin: auto;
+  color: #ffffff;
+}
+
+.spacex-rockets-launch span {
+  color: #f81b1b;
+}
+
+.spacex-rockets-launch h3 {
+  color: #f7f7f7;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.spacex-rockets-launch .rocket-img {
+  height: 700px;
+  background-size: cover;
+  background-image: url(../pictures/rocketait.jpg);
+}
+
+/*---Buttons----*/
+
+.button {
+  display: flex;
+  width: 190px;
+  border: 3px solid black;
+  padding: 0.8em;
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  text-decoration: none;
+  justify-content: center;
+  font-size: 1.7em;
+  background-color: rgb(218, 16, 16);
+}
+
+.button:hover {
+  background-color: black;
+}
+
+/*---Footer----*/
+
+.footer-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #000000;
+  color: #ffffff;
+  padding: auto;
+  letter-spacing: 2px;
+  height: 40px;
+  font-size: 13px;
+}
+
+.footer-text a {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.footer-text a:hover {
+  text-decoration: underline;
+  color: red;
+}
+
+.logo {
+  height: 29px;
+  width: auto;
+}
+
+/*-----Smaller Screen-----*/
+@media screen and (max-width: 799px) {
+  body {
+    font-size: 14px;
+  }
+
+  header {
+    justify-content: center;
+    display: table-cell;
+    font-size: 10px;
+  }
+
+  .hero-img .button {
+    display: table-cell;
+  }
+
+  .hero-img {
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    max-width: 100%;
+    -webkit-background-size: cover;
+    width: 100%;
+  }
+
+  .spacex-rockets {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-img h1 {
+    font-size: 40px;
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+  }
+
+
+  .button {
+    display: inline;
+    padding-top: 20px;
+  }
+
+  .hero-img h2 {
+    font-size: 13px;
+    display: table;
+  }
+
+  .hero-text h1 {
+    font-size: 300px;
+    display: table;
+  }
+
+  .socialbar {
+    width: 8%;
+    height: auto;
+  }
+
+  .fa {
+    padding: 2px;
+    font-size: 14px
+  }
+
+  .menu ul li {
+    min-width: 100%;
+    text-align: center;
+    justify-content: center;
+    margin-top: 1%;
+  }
+
+  .menu ul li a {
+    display: inline;
+    font-size: 22px;
+    justify-content: center;
+    margin-top: 1%;
+  }
+
+  .footer,
+  .footer-text {
+    font-size: 10px;
+    text-align: center;
+    justify-content: space-around;
+    width: auto;
+    padding: 20px;
+    flex-direction: table-cell;
+    flex-wrap: row;
+  }
+  .big-image::after {
+    height: 55%;
+  }
+
+.hero-text h1 {
+  font-size: 2em;
+}
+
+.hero-text p {
+  font-size: 1em;
+}
+
+}
