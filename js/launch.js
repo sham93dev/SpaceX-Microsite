@@ -40,3 +40,4 @@ function allLaunches(rockets) {
   }
   rocketDetails.innerHTML = html;
 }
+
